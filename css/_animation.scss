@@ -1,0 +1,37 @@
+// анимация для смены языка
+@keyframes animation_language_open {
+	0% {
+		transform: translateY(-20px);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+@keyframes animation_language_close {
+	0% {
+		transform: translateY(0);
+	}
+	100% {
+		transform: translateY(-20px);
+	}
+}
+
+// анимация для меню каталог
+@keyframes animation_menu_open {
+	0% {
+		transform: translateY(-100vh);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+@keyframes animation_menu_close {
+	0% {
+		transform: translateY(0);
+	}
+	100% {
+		transform: translateY(-100vh);
+	}
+}

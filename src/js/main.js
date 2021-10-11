@@ -11,6 +11,40 @@ $(document).ready(() => {
 		}
 	});
 
+	// === Изменяем язык ===
+	let arrow = $(".top__language-arrow");
+	let flag_language = false;
+	$(".top__language").click(() => {
+		if (!flag_language) {
+			arrow.addClass("arrow__active");
+			$(".top__language-select").show();
+			$(".top__language-select").removeClass("select-close");
+			$(".top__language-select").addClass("select-open");
+			flag_language = true;
+		} else {
+			arrow.removeClass("arrow__active");
+			$(".top__language-select").removeClass("select-open");
+			$(".top__language-select").addClass("select-close");
+			$(".top__language-select").hide(200);
+			flag_language = false;
+		}
+	});
+
+	// === открываем меню каталог ===
+	$(".top__btn").click(() => {
+		$(".menu-catalog").show();
+		$(".menu-catalog").removeClass("menu-close");
+		$(".menu-catalog").addClass("menu-open");
+		$("body").css("overflow", "hidden");
+	});
+
+	$(".menu-catalog__close").click(() => {
+		$(".menu-catalog").removeClass("menu-open");
+		$(".menu-catalog").addClass("menu-close");
+		$(".menu-catalog").slideUp(500);
+		$("body").css("overflow", "visible");
+	});
+
 	// === Добавление в корзину ===
 	$(".goods__card__bag").click(() => {
 		let count = $(".count").text();

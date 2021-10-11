@@ -150,9 +150,21 @@ body {
 			}
 		}
 	}
+
 	// .top__language
 	&__language {
+		position: relative;
 		transition: all 0.5s;
+		cursor: pointer;
+
+		.language__active {
+			color: $color-font;
+		}
+
+		.language__disabled {
+			color: $color-footer-text;
+		}
+
 		&-name {
 			display: inline-block;
 			vertical-align: middle;
@@ -160,26 +172,113 @@ body {
 
 			font-family: "Montserrat-Regular", sans-serif;
 			font-size: 16px;
-			color: $color-font;
 		}
+
 		&-arrow {
 			display: inline-block;
 			vertical-align: middle;
+			transition: all 0.3s;
+		}
+
+		.arrow__active {
+			transition: all 0.3s;
+			transform: rotate(180deg);
+		}
+
+		&-select {
+			display: none;
+			position: absolute;
+			top: 22px;
+			left: 0;
+
+			&.select-open {
+				animation: animation_language_open 0.3s;
+			}
+
+			&.select-close {
+				animation: animation_language_close 0.3s;
+			}
 		}
 	}
 }
 
-span.top__language-arrow {
-	transition: all 0.5s;
-}
+// === выпадающее меню каталог ===
+.menu-catalog {
+	display: none;
+	position: fixed;
+	z-index: 5;
+	width: 100%;
+	height: 100%;
+	background-color: $color-bg;
+	top: 0;
+	left: 0;
 
-span.top__language-arrow:hover {
-	transition: all 0.5s;
-	transform: rotate(180deg);
+	&.menu-open {
+		animation: animation_menu_open 0.5s;
+	}
+
+	&.menu-close {
+		animation: animation_menu_close 0.5s;
+	}
+
+	// .menu-catalog__items
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(2, 586px);
+		grid-template-rows: repeat(8, 88px);
+		grid-column-gap: 28px;
+		position: relative;
+	}
+
+	// .menu-catalog__item
+	&__item {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 20px 0;
+		border-bottom: 1px solid $color-line;
+	}
+
+	// .menu-catalog__item-name
+	&__item-name {
+		font-family: "Bigilla-Regular", serif;
+		font-size: 48px;
+		line-height: 48px;
+		color: $color-font;
+		transition: color 0.3s;
+
+		&:hover {
+			color: $color-footer-text;
+		}
+	}
+
+	// .menu-catalog__item-number
+	&__item-number {
+		font-family: "Montserrat-Regular", sans-serif;
+		font-size: 18px;
+		text-align: center;
+		color: $color-font;
+		width: 120px;
+	}
+
+	// .menu-catalog__close
+	&__close {
+		position: absolute;
+		cursor: pointer;
+		right: 0;
+		top: -34px;
+	}
+
+	.logo {
+		// margin: 40px auto 20px;
+		margin: 23px auto 20px;
+	}
 }
 
 .search {
-	cursor: pointer;
+	// cursor: pointer;
+	display: flex;
+	align-items: center;
 	// .search__img
 	&__img {
 		display: inline-block;
@@ -191,10 +290,19 @@ span.top__language-arrow:hover {
 	&__text {
 		display: inline-block;
 		vertical-align: middle;
-		margin-left: 3px;
+		margin-left: 5px;
 		font-family: "Montserrat-Regular", sans-serif;
 		font-size: 14px;
 		color: $color-font;
+		border: none;
+		outline: none;
+		background-color: transparent;
+
+		&::placeholder {
+			font-family: "Montserrat-Regular", sans-serif;
+			font-size: 14px;
+			color: $color-font;
+		}
 	}
 }
 
@@ -207,6 +315,10 @@ span.top__language-arrow:hover {
 	text-align: center;
 	padding: 5px 22px 3px 22px;
 	position: relative;
+	width: 111px;
+	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
 
 	// .logo__title
 	&__title {
@@ -573,10 +685,11 @@ span.top__language-arrow:hover {
 			line-height: 48px;
 			color: $color-font;
 			transition: color 0.3s;
+			position: relative;
 		}
 
 		&-name:hover {
-			color: $color-button;
+			color: $color-footer-text;
 
 			& ~ .category__item-img {
 				opacity: 1;
@@ -859,6 +972,18 @@ span.top__language-arrow:hover {
 		justify-content: space-between;
 		align-items: center;
 		padding: 50px 0 61px;
+
+		.logo {
+			&::after {
+				position: absolute;
+				content: url("../images/star.svg");
+				top: 108px;
+				left: 50%;
+				margin-left: -15px;
+				background-color: $color-bg;
+				width: 30px;
+			}
+		}
 	}
 
 	// .footer__contact
@@ -867,10 +992,12 @@ span.top__language-arrow:hover {
 		font-size: 14px;
 		line-height: 150%;
 		color: $color-footer-text;
-		width: 250px;
+		width: 277px;
 	}
 	// .footer__form
 	&__form {
+		display: flex;
+		align-items: center;
 		width: 233px;
 		margin-right: 44px;
 	}
@@ -887,7 +1014,7 @@ span.top__language-arrow:hover {
 	// .footer__form-email
 	&__form-email {
 		width: 174px;
-		height: 50px;
+		height: 51px;
 		border: 1px solid $color-font;
 		box-sizing: border-box;
 		background-color: transparent;
@@ -917,6 +1044,50 @@ span.top__language-arrow:hover {
 		font-size: 12px;
 		line-height: 150%;
 		color: $color-line;
+	}
+}
+
+// === модальное окно в видео
+.mfp-bg {
+	opacity: 0.9;
+	background-color: $color-bg;
+}
+
+.mfp-iframe-scaler {
+	iframe {
+		box-shadow: none;
+	}
+}
+
+.mfp-iframe-holder .mfp-close {
+	color: $color-line;
+}
+
+.close {
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 24px;
+	left: 24px;
+	width: 30px;
+	height: 30px;
+
+	span {
+		background-color: $color-line;
+		width: 100%;
+		height: 1px;
+	}
+
+	span:first-child {
+		position: absolute;
+		transform: rotate(45deg);
+	}
+
+	span:last-child {
+		position: absolute;
+		transform: rotate(-45deg);
 	}
 }
 
