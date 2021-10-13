@@ -46,6 +46,18 @@
 										placeholder="Search"
 									/>
 								</div>
+								<div class="top__language">
+									<span class="top__language-name language__active">En</span>
+									<span class="top__language-arrow">
+										<img src="images/arrow-down.svg" alt="arrow__down" />
+									</span>
+
+									<div class="top__language-select">
+										<span class="top__language-name language__disabled"
+											>Ru</span
+										>
+									</div>
+								</div>
 							</div>
 							<a class="logo" href="#">
 								<span class="logo__title">mono</span>
@@ -186,29 +198,31 @@
 				<!-- Меню -->
 				<nav class="menu">
 					<div class="container">
-						<ul class="menu__items">
-							<li class="menu__item">
-								<a class="menu__item-link" href="">About the project</a>
-							</li>
-							<li class="menu__item">
-								<a class="menu__item-link" href="">Stock</a>
-							</li>
-							<li class="menu__item">
-								<a class="menu__item-link" href="">Certificates</a>
-							</li>
-							<li class="menu__item">
-								<a class="menu__item-link" href="">Reviews</a>
-							</li>
-							<li class="menu__item">
-								<a class="menu__item-link" href="">Custom products</a>
-							</li>
-							<li class="menu__item">
-								<a class="menu__item-link" href="">Delivery</a>
-							</li>
-							<li class="menu__item">
-								<a class="menu__item-link" href="">Contacts</a>
-							</li>
-						</ul>
+						<div class="menu__limiter">
+							<ul class="menu__items">
+								<li class="menu__item">
+									<a class="menu__item-link" href="">About the project</a>
+								</li>
+								<li class="menu__item">
+									<a class="menu__item-link" href="">Stock</a>
+								</li>
+								<li class="menu__item">
+									<a class="menu__item-link" href="">Certificates</a>
+								</li>
+								<li class="menu__item">
+									<a class="menu__item-link" href="">Reviews</a>
+								</li>
+								<li class="menu__item">
+									<a class="menu__item-link" href="">Custom products</a>
+								</li>
+								<li class="menu__item">
+									<a class="menu__item-link" href="">Delivery</a>
+								</li>
+								<li class="menu__item">
+									<a class="menu__item-link" href="">Contacts</a>
+								</li>
+							</ul>
+						</div>
 					</div>
 				</nav>
 			</header>
@@ -228,21 +242,23 @@
 
 				<!-- Преимущества -->
 				<div class="advantage">
-					<!-- <div class="container"> -->
-					<div class="advantage__items">
-						<span class="advantage__item">Prosto</span>
-						<span class="advantage__item">Bismarck</span>
-						<span class="advantage__item">Balance</span>
-						<span class="advantage__item">Simplicity</span>
-						<span class="advantage__item">Taiga</span>
-						<span class="advantage__item">Sens</span>
-						<span class="advantage__item">Alchemia</span>
+					<div class="advantage__container">
+						<div class="advantage__limiter">
+							<div class="advantage__items">
+								<span class="advantage__item">Prosto</span>
+								<span class="advantage__item">Bismarck</span>
+								<span class="advantage__item">Balance</span>
+								<span class="advantage__item">Simplicity</span>
+								<span class="advantage__item">Taiga</span>
+								<span class="advantage__item">Sens</span>
+								<span class="advantage__item">Alchemia</span>
+							</div>
+						</div>
 					</div>
-					<!-- </div> -->
 				</div>
 
 				<!-- Товары -->
-				<div class="goods">
+				<!-- <div class="goods">
 					<div class="container">
 						<h2 class="goods__title title">Popular goods</h2>
 						<div class="goods__cards">
@@ -256,9 +272,7 @@
 										<a class="goods__card__title" href="#">Ring "Wide"</a>
 										<span class="goods__card__price">$53,65</span>
 									</div>
-									<button class="goods__card__bag">
-										<!-- <img src="./images/card-bag.svg" alt="bag" /> -->
-									</button>
+									<button class="goods__card__bag"></button>
 								</div>
 							</div>
 							<div class="goods__card">
@@ -271,9 +285,7 @@
 										<a class="goods__card__title" href="#">Ring "Line"</a>
 										<span class="goods__card__price">$44,45</span>
 									</div>
-									<button class="goods__card__bag">
-										<!-- <img src="./images/card-bag.svg" alt="bag" /> -->
-									</button>
+									<button class="goods__card__bag"></button>
 								</div>
 							</div>
 							<div class="goods__card">
@@ -286,9 +298,7 @@
 										<a class="goods__card__title" href="#">Eatting "Mono" </a>
 										<span class="goods__card__price">$44,45</span>
 									</div>
-									<button class="goods__card__bag">
-										<!-- <img src="./images/card-bag.svg" alt="bag" /> -->
-									</button>
+									<button class="goods__card__bag"></button>
 								</div>
 							</div>
 							<div class="goods__card">
@@ -301,9 +311,7 @@
 										<a class="goods__card__title" href="#">Eattings "Thin"</a>
 										<span class="goods__card__price">$40,80</span>
 									</div>
-									<button class="goods__card__bag">
-										<!-- <img src="./images/card-bag.svg" alt="bag" /> -->
-									</button>
+									<button class="goods__card__bag"></button>
 								</div>
 							</div>
 
@@ -317,9 +325,7 @@
 										<a class="goods__card__title" href="#">Ring "Amalg"</a>
 										<span class="goods__card__price">$52,00</span>
 									</div>
-									<button class="goods__card__bag">
-										<!-- <img src="./images/card-bag.svg" alt="bag" /> -->
-									</button>
+									<button class="goods__card__bag"></button>
 								</div>
 							</div>
 
@@ -333,17 +339,15 @@
 										<a class="goods__card__title" href="#">Ring "One day"</a>
 										<span class="goods__card__price">$63,80</span>
 									</div>
-									<button class="goods__card__bag">
-										<!-- <img src="./images/card-bag.svg" alt="bag" /> -->
-									</button>
+									<button class="goods__card__bag"></button>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
+				</div> -->
 
 				<!-- Категории -->
-				<div class="category">
+				<!-- <div class="category">
 					<div class="container">
 						<div class="category__items">
 							<div class="category__item">
@@ -429,7 +433,7 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				</div> -->
 
 				<!-- Информация о блоге -->
 				<div class="info-blog">
@@ -513,7 +517,7 @@
 				</div>
 
 				<!-- Инстаграм -->
-				<div class="instagram">
+				<!-- <div class="instagram">
 					<div class="container">
 						<div class="instagram__items">
 							<a class="instagram__item" href="#">
@@ -541,7 +545,7 @@
 							</a>
 						</div>
 					</div>
-				</div>
+				</div> -->
 			</main>
 			<footer class="footer">
 				<div class="footer__wrapper">

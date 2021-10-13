@@ -19,11 +19,15 @@ body {
 		content: "";
 		background: rgba(202, 193, 225, 0.3);
 		filter: blur(200px);
-		width: 1564px;
-		height: 1729px;
+		width: 100%;
+		// width: 1564px;
+		height: 100%;
+		// height: 1729px;
 		top: 450px;
-		left: 50%;
-		margin-left: -782px;
+		left: 0;
+		// left: 50%;
+		// margin-left: -50%;
+		// margin-left: -782px;
 		z-index: 1;
 	}
 }
@@ -60,6 +64,10 @@ body {
 		align-items: center;
 		width: 290px;
 		justify-content: flex-start;
+
+		.top__language {
+			display: none;
+		}
 	}
 
 	.logo {
@@ -212,6 +220,8 @@ body {
 	background-color: $color-bg;
 	top: 0;
 	left: 0;
+	overflow-y: scroll;
+	padding-bottom: 80px;
 
 	&.menu-open {
 		animation: animation_menu_open 0.5s;
@@ -224,7 +234,8 @@ body {
 	// .menu-catalog__items
 	&__items {
 		display: grid;
-		grid-template-columns: repeat(2, 586px);
+		// grid-template-columns: repeat(2, 586px);
+		grid-template-columns: repeat(2, 1fr);
 		grid-template-rows: repeat(8, 88px);
 		grid-column-gap: 28px;
 		position: relative;
@@ -346,13 +357,24 @@ body {
 	}
 	// .menu__item
 	&__item {
-		margin: 0 30px;
+		// margin: 0 30px;
+		margin-right: 60px;
 
 		// .menu__item__link
 		&-link {
 			font-family: "Montserrat-Regular", sans-serif;
 			font-size: 16px;
 			color: $color-font;
+			// запретить перенос слов
+			white-space: nowrap;
+		}
+
+		// &:first-child {
+		// 	margin-left: 0;
+		// }
+
+		&:last-child {
+			margin-right: 0;
 		}
 	}
 }
@@ -391,7 +413,7 @@ body {
 		top: 129px;
 		font-family: "Bigilla-Regular", serif;
 		color: $color-font;
-		width: 520px;
+		max-width: 520px;
 		z-index: 1;
 	}
 	// .content__title
@@ -410,10 +432,11 @@ body {
 		margin-left: 142px;
 		margin-top: -16px;
 	}
+
 	// .content__img
 	&__img {
-		width: 432px;
-		height: 560px;
+		max-width: 432px;
+		max-height: 560px;
 		position: relative;
 
 		&::before {
@@ -440,7 +463,7 @@ body {
 
 // === advantage ===
 .advantage {
-	padding: 38px 0;
+	padding: 38px 0 38px 15px;
 	display: flex;
 	justify-content: center;
 	position: relative;
@@ -468,6 +491,7 @@ body {
 
 	// .advantage__items
 	&__items {
+		display: flex;
 	}
 	// .advantage__item
 	&__item {
@@ -729,6 +753,8 @@ body {
 
 // === info blog ===
 .info-blog {
+	// отключил для верстки адаптива
+	display: none;
 	padding: 210px 0 248px;
 	position: relative;
 	z-index: 2;
@@ -994,6 +1020,7 @@ body {
 		color: $color-footer-text;
 		width: 277px;
 	}
+
 	// .footer__form
 	&__form {
 		display: flex;

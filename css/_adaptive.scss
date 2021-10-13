@@ -1,38 +1,449 @@
 @media screen and (min-width: 1921px) {
+}
 
+@media screen and (max-width: 1499px) {
+	// === advantage ===
+	.advantage {
+		&__container {
+			overflow: hidden;
+		}
+
+		&__item:last-child {
+			padding-right: 15px;
+		}
+
+		// .advantage__limiter
+		&__limiter {
+			margin: 0 auto -20px;
+			width: 100%;
+			padding: 0 0 20px 0;
+			/* Зададим возможность горизонтальной прокрутки */
+			overflow-x: scroll;
+		}
+	}
 }
 
 //  1200px - 1229px
 @media screen and (max-width: 1229px) {
-
 }
 
-//  1024px - 1199px
+//  1100px - 1199px
 @media screen and (max-width: 1199px) {
+}
 
+//  1024px - 1100px
+@media screen and (max-width: 1099px) {
+	.menu-catalog {
+		&__items {
+			grid-column-gap: 16px;
+		}
+
+		&__item {
+			&-name {
+				font-size: 30px;
+			}
+		}
+	}
 }
 
 //  768px - 1023px
 @media screen and (max-width: 1023px) {
+	// === шапка с логотипом ===
+	.top {
+		// .top__wrapper
+		&__wrapper {
+		}
 
+		// .top__left
+		&__left {
+		}
+
+		.logo {
+			&::after {
+			}
+		}
+
+		// .top__btn
+		&__btn {
+			margin-right: 30px;
+
+			.burger {
+				margin-right: 8px;
+				span {
+				}
+				span:first-child {
+				}
+				span:last-child {
+				}
+			}
+
+			span {
+			}
+		}
+		// .top__right
+		&__right {
+		}
+		// .top__favourite
+		&__favourite {
+			margin-right: 17px;
+		}
+		// .top__bag
+		&__bag {
+			margin-right: 38px;
+
+			// .top__bag__count
+			&-count {
+				span {
+				}
+			}
+		}
+
+		// .top__language
+		&__language {
+			.language__active {
+			}
+
+			.language__disabled {
+			}
+
+			&-name {
+			}
+
+			&-arrow {
+			}
+
+			.arrow__active {
+			}
+
+			&-select {
+			}
+		}
+	}
+
+	// === menu ===
+	.menu {
+		// .menu__items
+		&__items {
+		}
+		// .menu__item
+		&__item {
+			margin-right: 28px;
+			// margin: 0 14px;
+
+			// .menu__item__link
+			&-link {
+				font-size: 14px;
+			}
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+
+	// === header content ===
+	.content {
+		&::before {
+			height: 125px;
+		}
+
+		&::after {
+			right: 50px;
+			transform: scale(0.8);
+		}
+
+		// .content__img
+		&__img {
+			&::before {
+				width: 125px;
+				left: -140px;
+			}
+
+			&::after {
+				width: 125px;
+				right: -140px;
+			}
+		}
+	}
+
+	// === footer ===
+	.footer {
+		// .footer__contact
+		&__contact {
+			// width: 250px;
+		}
+
+		// .footer__form
+		&__form {
+			// width: 250px;
+			margin-right: 0;
+			margin-left: 44px;
+		}
+
+		// .footer__form-label
+		&__form-label {
+			margin-left: 44px;
+		}
+	}
+
+	// === advantage ===
+	.advantage {
+		&__item {
+			margin-right: 62px;
+
+			&::after {
+				right: -45px;
+			}
+		}
+	}
 }
 
-//  580px - 767px
-@media screen and (max-width: 767px) {
+//  480px - 579px
+@media screen and (max-width: 795px) {
+	.menu-catalog {
+		&__items {
+			grid-template-columns: repeat(1, 1fr);
+			grid-template-rows: repeat(16, 88px);
+		}
 
+		&__item {
+			&-number {
+				width: auto;
+			}
+		}
+	}
+}
+
+//  726px - 767px
+@media screen and (max-width: 767px) {
+	// === menu ===
+	.menu {
+		&__item {
+			&-link {
+				white-space: nowrap;
+			}
+		}
+	}
+}
+
+//  656px - 725px
+@media screen and (max-width: 725px) {
+	.top {
+		// .top__btn
+		&__btn {
+			background-color: transparent;
+			margin-right: 12px;
+			padding: 12px 0;
+
+			.burger {
+				margin-right: 0;
+				span {
+					background-color: $color-font;
+				}
+			}
+
+			span {
+				font-size: 0px;
+			}
+		}
+
+		// .top__bag
+		&__bag {
+			margin-right: 0;
+		}
+
+		// .top__left
+		&__left {
+			.top__language {
+				display: block;
+			}
+		}
+
+		// .top__right
+		&__right {
+			.top__language {
+				display: none;
+			}
+		}
+
+		// .top__language
+		&__language {
+		}
+	}
+
+	// === menu ===
+	.menu {
+		&__item {
+			margin-right: 14px;
+		}
+	}
+
+	.search {
+		display: none;
+	}
+
+	// === header content ===
+	.content {
+		padding: 40px 0 50px;
+
+		&::before {
+			display: none;
+		}
+
+		&::after {
+			right: -20px;
+			transform: scale(0.5);
+			top: -50px;
+		}
+
+		&__text {
+			left: -20px;
+			top: -30px;
+			transform: scale(0.7);
+		}
+
+		// .content__img
+		&__img {
+			&::before {
+				display: none;
+			}
+
+			&::after {
+				display: none;
+			}
+		}
+
+		// .content__title
+		&__title {
+			// font-size: 48px;
+		}
+
+		// .content__subtitle
+		&__subtitle {
+			// font-size: 48px;
+		}
+
+		// .content__text
+		&__text {
+		}
+	}
+
+	// === footer ===
+	.footer {
+		// .footer__content
+		&__content {
+			flex-direction: column;
+			padding: 30px 0;
+
+			.logo {
+				order: 1;
+				margin-bottom: 20px;
+
+				&::after {
+					top: 239px;
+				}
+			}
+		}
+
+		// .footer__form
+		&__form {
+			margin-left: 0;
+
+			&-wrapper {
+				order: 2;
+			}
+
+			&-label {
+				margin-left: 0;
+			}
+		}
+
+		// .footer__contact
+		&__contact {
+			order: 3;
+			margin-top: 20px;
+			text-align: center;
+		}
+	}
+}
+
+//  580px - 655px
+@media screen and (max-width: 655px) {
+	// === menu ===
+	.menu {
+		.container {
+			/* Спрячем всё, что выходит за границы родителя */
+			overflow: hidden;
+			padding-right: 0;
+		}
+
+		&__items {
+			justify-content: flex-start;
+		}
+
+		&__item {
+			&-link {
+				white-space: nowrap;
+			}
+		}
+
+		&__item:last-child {
+			padding-right: 15px;
+		}
+
+		// .menu__limiter
+		&__limiter {
+			margin: 0 auto -20px;
+			width: 100%;
+			// width: 400px;
+			padding: 0 0 20px 0;
+			/* Зададим возможность горизонтальной прокрутки */
+			overflow-x: scroll;
+			/* Для Сафари дополнительно зададим инерцию при прокрутке.
+  С инерцией меню будет «оттягиваться» при попытке прокрутить
+  его за его пределы. */
+			// -webkit-overflow-scrolling: touch;
+		}
+	}
 }
 
 //  480px - 579px
 @media screen and (max-width: 579px) {
-
 }
 
 //  480px - 499px
 @media screen and (max-width: 499px) {
+	// === header content ===
+	.content {
+		&::after {
+			right: -50px;
+			transform: scale(0.3);
+			top: -55px;
+		}
 
+		&__text {
+			left: 35px;
+			top: 15px;
+			transform: scale(1);
+		}
+
+		&__title {
+			font-size: 48px;
+			margin-left: 42px;
+		}
+
+		&__subtitle {
+			font-size: 48px;
+			margin-top: -6px;
+		}
+
+		&__subtitle:last-child {
+			margin-left: 80px;
+			margin-top: -10px;
+		}
+	}
 }
 
 //  320px - 479px
 @media screen and (max-width: 479px) {
-
 }
