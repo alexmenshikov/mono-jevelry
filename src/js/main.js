@@ -13,36 +13,39 @@ $(document).ready(() => {
 
 	// === Изменяем язык ===
 	let arrow = $(".top__language-arrow");
+	let top_language = $(".top__language-select");
 	let flag_language = false;
 	$(".top__language").click(() => {
 		if (!flag_language) {
 			arrow.addClass("arrow__active");
-			$(".top__language-select").show();
-			$(".top__language-select").removeClass("select-close");
-			$(".top__language-select").addClass("select-open");
+			top_language.show();
+			top_language.removeClass("select-close");
+			top_language.addClass("select-open");
 			flag_language = true;
 		} else {
 			arrow.removeClass("arrow__active");
-			$(".top__language-select").removeClass("select-open");
-			$(".top__language-select").addClass("select-close");
-			$(".top__language-select").hide(200);
+			top_language.removeClass("select-open");
+			top_language.addClass("select-close");
+			top_language.hide(200);
 			flag_language = false;
 		}
 	});
 
 	// === открываем меню каталог ===
+	let menu_catalog = $(".menu-catalog");
+	let body = $("body");
 	$(".top__btn").click(() => {
-		$(".menu-catalog").show();
-		$(".menu-catalog").removeClass("menu-close");
-		$(".menu-catalog").addClass("menu-open");
-		$("body").css("overflow", "hidden");
+		menu_catalog.show();
+		menu_catalog.removeClass("menu-close");
+		menu_catalog.addClass("menu-open");
+		body.css("overflow", "hidden");
 	});
 
 	$(".menu-catalog__close").click(() => {
-		$(".menu-catalog").removeClass("menu-open");
-		$(".menu-catalog").addClass("menu-close");
-		$(".menu-catalog").slideUp(500);
-		$("body").css("overflow", "visible");
+		menu_catalog.removeClass("menu-open");
+		menu_catalog.addClass("menu-close");
+		menu_catalog.slideUp(500);
+		body.css("overflow", "visible");
 	});
 
 	// === Добавление в корзину ===
@@ -58,7 +61,8 @@ $(document).ready(() => {
 		arrow: true,
 		slidesToShow: 4,
 		slidesToScroll: 1,
-		// infinite: true,
+		variableWidth: true,
+		infinite: true,
 	});
 
 	// === Открыть модальное окно с видео ===

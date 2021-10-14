@@ -90,6 +90,7 @@ body {
 		padding: 12px 21px;
 		color: $color-white;
 		margin-right: 73px;
+		cursor: pointer;
 
 		.burger {
 			display: flex;
@@ -139,6 +140,8 @@ body {
 	&__bag {
 		position: relative;
 		margin-right: 65px;
+		cursor: pointer;
+
 		// .top__bag__count
 		&-count {
 			position: absolute;
@@ -543,7 +546,7 @@ body {
 	// .goods__card
 	&__card {
 		display: grid;
-		grid-template-columns: 275px;
+		grid-template-columns: 276px;
 		grid-template-rows: 278px 38px;
 		grid-row-gap: 14px;
 		position: relative;
@@ -572,6 +575,8 @@ body {
 		// .goods__card__img
 		&__img {
 			position: relative;
+			width: 275px;
+			height: 278px;
 
 			.goods__card__favourite {
 				background-image: url("./../images/favourite.svg");
@@ -587,6 +592,12 @@ body {
 				&.active {
 					background-image: url("./../images/favourite-active.svg");
 				}
+			}
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
 			}
 		}
 
@@ -618,7 +629,7 @@ body {
 	.slick-list {
 		overflow: hidden;
 		padding: 0;
-		margin: 0 -15px;
+		// margin: 0 -15px;
 	}
 
 	// лента слайдов
@@ -628,7 +639,10 @@ body {
 
 	// слайд
 	.slick-slide {
-		margin: 0 15px;
+		margin: 0 16px;
+		// margin: 0 15px;
+		width: 276px;
+		height: 330px;
 	}
 
 	// стрелки
@@ -640,7 +654,7 @@ body {
 		font-size: 0;
 		outline: none;
 		width: 25px;
-		height: 8px;
+		height: 10px;
 		border-style: none;
 		background-color: transparent;
 

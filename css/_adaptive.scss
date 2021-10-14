@@ -25,6 +25,26 @@
 
 //  1200px - 1229px
 @media screen and (max-width: 1229px) {
+	.goods {
+		.container {
+			padding: 0 0 0 15px;
+		}
+	}
+
+	.slick-slider {
+		// стрелки
+		.slick-arrow {
+			// стрелка влево
+			&.slick-prev {
+				right: 70px;
+			}
+
+			// стрелка вправо
+			&.slick-next {
+				right: 15px;
+			}
+		}
+	}
 }
 
 //  1100px - 1199px
@@ -222,6 +242,60 @@
 			&-link {
 				white-space: nowrap;
 			}
+		}
+	}
+
+	.advantage {
+		&::after,
+		&::before {
+			width: calc(100% - 50px);
+		}
+	}
+
+	// === goods ===
+	.goods {
+		padding: 100px 0 80px;
+
+		// .goods__card
+		&__card {
+			grid-template-columns: 135px;
+			grid-template-rows: 136px 38px;
+
+			// .goods__card__content
+			&__content {
+				grid-template-columns: 110px 20px;
+				grid-template-rows: 38px;
+			}
+
+			// .goods__card__img
+			&__img {
+				position: relative;
+				width: 135px;
+				height: 136px;
+
+				.goods__card__favourite {
+					top: 13px;
+					right: 12px;
+				}
+			}
+		}
+
+		// .goods__title
+		&__title {
+			font-size: 36px;
+			line-height: 36px;
+			margin-bottom: 30px;
+			width: 160px;
+		}
+	}
+
+	// === slick slider ===
+	.slick-slider {
+		// слайд
+		.slick-slide {
+			margin: 0 10px;
+			width: 135px;
+			height: 188px;
 		}
 	}
 }
