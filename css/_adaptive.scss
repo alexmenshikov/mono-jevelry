@@ -216,6 +216,18 @@
 			}
 		}
 	}
+
+	// === category ===
+	.category {
+		// .category__item
+		&__item {
+			// .category__item-img
+			&-img {
+				width: 340px;
+				height: 475px;
+			}
+		}
+	}
 }
 
 //  480px - 579px
@@ -296,6 +308,29 @@
 			margin: 0 10px;
 			width: 135px;
 			height: 188px;
+		}
+	}
+
+	// === category ===
+	.category {
+		// .category__item
+		&__item {
+			padding: 30px 0 29px;
+
+			// .category__item-name
+			&-name {
+				font-size: 30px;
+			}
+
+			// .category__item-number
+			&-number {
+				width: auto;
+			}
+
+			// .category__item-img
+			&-img {
+				display: none;
+			}
 		}
 	}
 }

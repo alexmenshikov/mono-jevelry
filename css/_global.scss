@@ -712,6 +712,7 @@ body {
 		// grid-template-columns: 1fr 120px;
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
 		padding: 40px 0 39px 0;
 		// align-items: center;
 		border-bottom: 1px solid $color-line;
@@ -742,6 +743,9 @@ body {
 			// top: 0;
 			z-index: 2;
 			transition: opacity 0.3s;
+			width: 400px;
+			height: 560px;
+			object-fit: contain;
 		}
 
 		&-number {
