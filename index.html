@@ -46,7 +46,16 @@
 										placeholder="Search"
 									/>
 								</div>
-								<div class="top__language">
+
+								<select
+									class="top__language"
+									onChange="document.location.href=this.options[this.selectedIndex].value;"
+									name="language"
+								>
+									<option value="/">EN</option>
+									<option value="/ru/">RU</option>
+								</select>
+								<!-- <div class="top__language">
 									<span class="top__language-name language__active">En</span>
 									<span class="top__language-arrow">
 										<img src="images/arrow-down.svg" alt="arrow__down" />
@@ -57,7 +66,7 @@
 											>Ru</span
 										>
 									</div>
-								</div>
+								</div> -->
 							</div>
 							<a class="logo" href="#">
 								<span class="logo__title">mono</span>
@@ -73,7 +82,16 @@
 										<span class="count">0</span>
 									</div>
 								</div>
-								<div class="top__language">
+
+								<select
+									class="top__language"
+									onChange="document.location.href=this.options[this.selectedIndex].value;"
+									name="language"
+								>
+									<option value="/">EN</option>
+									<option value="/ru/">RU</option>
+								</select>
+								<!-- <div class="top__language">
 									<span class="top__language-name language__active">En</span>
 									<span class="top__language-arrow">
 										<img src="images/arrow-down.svg" alt="arrow__down" />
@@ -84,7 +102,7 @@
 											>Ru</span
 										>
 									</div>
-								</div>
+								</div> -->
 							</div>
 						</div>
 

@@ -166,8 +166,14 @@ body {
 	// .top__language
 	&__language {
 		position: relative;
+		display: block;
 		transition: all 0.5s;
-		cursor: pointer;
+		border: none;
+		background-color: transparent;
+		outline: none;
+		color: $color-font;
+		font-family: "Montserrat-Regular", sans-serif;
+		font-size: 16px;
 
 		.language__active {
 			color: $color-font;

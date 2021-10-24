@@ -111,8 +111,8 @@
 				position: relative;
 
 				&:before {
-					top: -140px;
-					left: 130px;
+					top: -120px;
+					left: calc(100% - 100px);
 					transform: scale(0.56);
 				}
 			}
@@ -557,6 +557,7 @@
 			.item-star {
 				&:before {
 					top: -100px;
+					left: calc(100% - 150px);
 				}
 			}
 		}
