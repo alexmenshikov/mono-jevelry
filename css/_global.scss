@@ -318,6 +318,9 @@ body {
 
 			font-family: "Montserrat-Regular", sans-serif;
 			font-size: 16px;
+			background-color: #faf8f8;
+			z-index: 2;
+			position: relative;
 		}
 
 		&-arrow {
@@ -1180,6 +1183,8 @@ body {
 		line-height: 150%;
 		color: $color-footer-text;
 		width: 277px;
+		position: relative;
+		z-index: 2;
 	}
 
 	// .footer__form
@@ -1188,6 +1193,11 @@ body {
 		align-items: center;
 		width: 233px;
 		margin-right: 44px;
+	}
+
+	&__form-wrapper {
+		position: relative;
+		z-index: 2;
 	}
 
 	// .footer__form-label

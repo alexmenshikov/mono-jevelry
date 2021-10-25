@@ -49,20 +49,20 @@ $(document).ready(() => {
 		if (!flag_language) {
 			arrow.addClass("arrow__active");
 			top_language.show();
-			if ($(window).width() >= "1024") {
-				top_language.removeClass("select-close");
-				top_language.addClass("select-open");
-			}
+			//if ($(window).width() >= "1024") {
+			top_language.removeClass("select-close");
+			top_language.addClass("select-open");
+			//}
 			flag_language = true;
 		} else {
 			arrow.removeClass("arrow__active");
-			if ($(window).width() >= "1024") {
-				top_language.removeClass("select-open");
-				top_language.addClass("select-close");
-				top_language.hide(200);
-			} else {
-				top_language.hide();
-			}
+			//if ($(window).width() >= "1024") {
+			top_language.removeClass("select-open");
+			top_language.addClass("select-close");
+			top_language.hide(200);
+			//} else {
+			//	top_language.hide();
+			//}
 			flag_language = false;
 		}
 	});
