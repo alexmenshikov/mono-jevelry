@@ -35,38 +35,54 @@
 									<span>Catalog</span>
 								</div>
 								<div class="search">
-									<img
-										class="search__img"
-										src="images/search.svg"
-										alt="search"
-									/>
-									<input
-										class="search__text"
-										type="text"
-										placeholder="Search"
-									/>
+									<img class="search__img" src="images/search.svg" alt="search" />
+									<input class="search__text" type="text" placeholder="Search" />
 								</div>
 
-								<select
+								<!-- <select
 									class="top__language"
 									onChange="document.location.href=this.options[this.selectedIndex].value;"
 									name="language"
 								>
 									<option value="/">EN</option>
 									<option value="/ru/">RU</option>
-								</select>
-								<!-- <div class="top__language">
+								</select> -->
+								<!-- <form>
+									<div class="__select" data-state="">
+										<div class="__select__title" data-default="En">En</div>
+										<div class="__select__content">
+											<input
+												id="singleSelect0"
+												class="__select__input"
+												type="radio"
+												name="singleSelect"
+												checked
+											/>
+											<label for="singleSelect0" class="__select__label"
+												>En</label
+											>
+											<input
+												id="singleSelect1"
+												class="__select__input"
+												type="radio"
+												name="singleSelect"
+											/>
+											<label for="singleSelect1" class="__select__label"
+												>Ru</label
+											>
+										</div>
+									</div>
+								</form> -->
+								<div class="top__language">
 									<span class="top__language-name language__active">En</span>
 									<span class="top__language-arrow">
 										<img src="images/arrow-down.svg" alt="arrow__down" />
 									</span>
 
 									<div class="top__language-select">
-										<span class="top__language-name language__disabled"
-											>Ru</span
-										>
+										<span class="top__language-name language__disabled">Ru</span>
 									</div>
-								</div> -->
+								</div>
 							</div>
 							<a class="logo" href="#">
 								<span class="logo__title">mono</span>
@@ -83,26 +99,50 @@
 									</div>
 								</div>
 
-								<select
+								<!-- <select
 									class="top__language"
 									onChange="document.location.href=this.options[this.selectedIndex].value;"
 									name="language"
 								>
 									<option value="/">EN</option>
 									<option value="/ru/">RU</option>
-								</select>
-								<!-- <div class="top__language">
+								</select> -->
+								<!-- <form>
+									<div class="__select" data-state="">
+										<div class="__select__title" data-default="En">En</div>
+										<div class="__select__content">
+											<input
+												id="singleSelect0"
+												class="__select__input"
+												type="radio"
+												name="singleSelect"
+												checked
+											/>
+											<label for="singleSelect0" class="__select__label"
+												>En</label
+											>
+											<input
+												id="singleSelect1"
+												class="__select__input"
+												type="radio"
+												name="singleSelect"
+											/>
+											<label for="singleSelect1" class="__select__label"
+												>Ru</label
+											>
+										</div>
+									</div>
+								</form> -->
+								<div class="top__language">
 									<span class="top__language-name language__active">En</span>
 									<span class="top__language-arrow">
 										<img src="images/arrow-down.svg" alt="arrow__down" />
 									</span>
 
 									<div class="top__language-select">
-										<span class="top__language-name language__disabled"
-											>Ru</span
-										>
+										<span class="top__language-name language__disabled">Ru</span>
 									</div>
-								</div> -->
+								</div>
 							</div>
 						</div>
 
@@ -129,9 +169,7 @@
 									</div>
 
 									<div class="menu-catalog__item">
-										<a class="menu-catalog__item-name" href="#"
-											>Mono earrings</a
-										>
+										<a class="menu-catalog__item-name" href="#">Mono earrings</a>
 										<span class="menu-catalog__item-number">138</span>
 									</div>
 
@@ -141,9 +179,7 @@
 									</div>
 
 									<div class="menu-catalog__item">
-										<a class="menu-catalog__item-name" href="#"
-											>Labret / piercing</a
-										>
+										<a class="menu-catalog__item-name" href="#">Labret / piercing</a>
 										<span class="menu-catalog__item-number">5</span>
 									</div>
 
@@ -158,9 +194,7 @@
 									</div>
 
 									<div class="menu-catalog__item">
-										<a class="menu-catalog__item-name" href="#"
-											>Phalanx rings</a
-										>
+										<a class="menu-catalog__item-name" href="#">Phalanx rings</a>
 										<span class="menu-catalog__item-number">40</span>
 									</div>
 
@@ -170,9 +204,7 @@
 									</div>
 
 									<div class="menu-catalog__item">
-										<a class="menu-catalog__item-name" href="#"
-											>Bracelets on the leg</a
-										>
+										<a class="menu-catalog__item-name" href="#">Bracelets on the leg</a>
 										<span class="menu-catalog__item-number">19</span>
 									</div>
 
@@ -197,9 +229,7 @@
 									</div>
 
 									<div class="menu-catalog__item">
-										<a class="menu-catalog__item-name" href="#"
-											>Brooches / clubs</a
-										>
+										<a class="menu-catalog__item-name" href="#">Brooches / clubs</a>
 										<span class="menu-catalog__item-number">14</span>
 									</div>
 
@@ -371,83 +401,47 @@
 							<div class="category__item">
 								<a class="category__item-name" href="#">Pendants</a>
 								<span class="category__item-number">175</span>
-								<img
-									class="category__item-img align-top"
-									src="./images/category/category-Pendants.png"
-									alt="category"
-								/>
+								<img class="category__item-img align-top" src="./images/category/category-Pendants.png" alt="category" />
 							</div>
 							<div class="category__item">
 								<a class="category__item-name" href="#">Rings</a>
 								<span class="category__item-number">89</span>
-								<img
-									class="category__item-img align-top"
-									src="./images/category/category-Rings.png"
-									alt="category"
-								/>
+								<img class="category__item-img align-top" src="./images/category/category-Rings.png" alt="category" />
 							</div>
 							<div class="category__item">
 								<a class="category__item-name" href="#">Earrings</a>
 								<span class="category__item-number">45</span>
-								<img
-									class="category__item-img align-top"
-									src="./images/category/category-Earrings.png"
-									alt="category"
-								/>
+								<img class="category__item-img align-top" src="./images/category/category-Earrings.png" alt="category" />
 							</div>
 							<div class="category__item">
 								<a class="category__item-name" href="#">Choker necklace</a>
 								<span class="category__item-number">105</span>
-								<img
-									class="category__item-img align-top"
-									src="./images/category/category-Choker necklace.png"
-									alt="category"
-								/>
+								<img class="category__item-img align-top" src="./images/category/category-Choker necklace.png" alt="category" />
 							</div>
 							<div class="category__item">
 								<a class="category__item-name" href="#">Bracelets</a>
 								<span class="category__item-number">89</span>
-								<img
-									class="category__item-img align-top"
-									src="./images/category/category-Bracelets.png"
-									alt="category"
-								/>
+								<img class="category__item-img align-top" src="./images/category/category-Bracelets.png" alt="category" />
 							</div>
 							<div class="category__item">
 								<a class="category__item-name" href="#">Jackets</a>
 								<span class="category__item-number">42</span>
-								<img
-									class="category__item-img align-bottom"
-									src="./images/category/category-Jackets.png"
-									alt="category"
-								/>
+								<img class="category__item-img align-bottom" src="./images/category/category-Jackets.png" alt="category" />
 							</div>
 							<div class="category__item">
 								<a class="category__item-name" href="#">Phalanx rings</a>
 								<span class="category__item-number">50</span>
-								<img
-									class="category__item-img align-bottom"
-									src="./images/category/category-Phalanx rings.png"
-									alt="category"
-								/>
+								<img class="category__item-img align-bottom" src="./images/category/category-Phalanx rings.png" alt="category" />
 							</div>
 							<div class="category__item">
 								<a class="category__item-name" href="#">Chokers</a>
 								<span class="category__item-number">38</span>
-								<img
-									class="category__item-img align-bottom"
-									src="./images/category/category-Chokers.png"
-									alt="category"
-								/>
+								<img class="category__item-img align-bottom" src="./images/category/category-Chokers.png" alt="category" />
 							</div>
 							<div class="category__item">
 								<a class="category__item-name" href="#">Ear cuffs</a>
 								<span class="category__item-number">78</span>
-								<img
-									class="category__item-img align-bottom"
-									src="./images/category/category-Ear cuffs.png"
-									alt="category"
-								/>
+								<img class="category__item-img align-bottom" src="./images/category/category-Ear cuffs.png" alt="category" />
 							</div>
 						</div>
 					</div>
@@ -456,14 +450,7 @@
 				<!-- Информация о блоге -->
 				<div class="info-blog">
 					<div class="info-blog__line">
-						<svg
-							width="100%"
-							height="1450"
-							viewBox="0 0 1440 1450"
-							fill="none"
-							preserveAspectRatio="none"
-							xmlns="http://www.w3.org/2000/svg"
-						>
+						<svg width="100%" height="1450" viewBox="0 0 1440 1450" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
 							<path
 								d="M-67.0004 1448.99C-46.2629 1451.33 7.35206 1432.42 85.8412 1375.08C158.5 1322 176.782 1249.08 309 1218C434.5 1188.5 603.849 1271.39 746.482 1027.41C889.116 783.419 907.69 730.014 1046.64 654.698C1185.58 579.382 1308.52 530.172 1379.99 416.908C1437.17 326.297 1455.87 101.602 1458.07 0.58061"
 								stroke="#AEADAE"
@@ -473,45 +460,27 @@
 					<div class="container">
 						<div class="info-blog__top">
 							<div class="info-blog__top-item">
-								<p class="info-blog__top-text">
-									Learn a lot of new things for yourself. We tell you about new
-									items, trends and much more!
-								</p>
+								<p class="info-blog__top-text">Learn a lot of new things for yourself. We tell you about new items, trends and much more!</p>
 								<div class="info-blog__top-img">
-									<img
-										src="./images/info-blog__top-1.png"
-										alt="info-blog__top-img"
-									/>
+									<img src="./images/info-blog__top-1.png" alt="info-blog__top-img" />
 								</div>
 							</div>
 							<div class="info-blog__top-item item-star">
 								<div class="info-blog__top-img">
-									<img
-										src="./images/info-blog__top-2.png"
-										alt="info-blog__top-img"
-									/>
+									<img src="./images/info-blog__top-2.png" alt="info-blog__top-img" />
 								</div>
 							</div>
 							<div class="info-blog__top-item">
-								<a class="info-blog__top-title title" href="#"
-									>Go to our blog page</a
-								>
-								<span class="info-blog__top-text">
-									Be aware of the events!
-								</span>
+								<a class="info-blog__top-title title" href="#">Go to our blog page</a>
+								<span class="info-blog__top-text"> Be aware of the events! </span>
 								<a class="info-blog__top-btn btn" href="#">Read the blog</a>
 							</div>
 						</div>
 						<div class="info-blog__bottom">
-							<h3 class="info-blog__bottom-title title">
-								See how our masterpieces are created
-							</h3>
+							<h3 class="info-blog__bottom-title title">See how our masterpieces are created</h3>
 							<div class="info-blog__bottom-popap">
 								<!-- <button class="info-blog__bottom-play"></button> -->
-								<a
-									class="info-blog__bottom-play popup-youtube"
-									href="https://www.youtube.com/watch?v=Bv00cV7uHGE"
-								></a>
+								<a class="info-blog__bottom-play popup-youtube" href="https://www.youtube.com/watch?v=Bv00cV7uHGE"></a>
 							</div>
 
 							<!-- <div class="info-blog__popap">
@@ -583,24 +552,12 @@
 								<span class="logo__subtitle">jevelry</span>
 							</a>
 							<div class="footer__form-wrapper">
-								<div class="footer__form-label">
-									Keep up to date with our news
-								</div>
+								<div class="footer__form-label">Keep up to date with our news</div>
 								<form class="footer__form" action="#" method="post">
-									<input
-										class="footer__form-email"
-										type="email"
-										placeholder="E-mail"
-									/>
+									<input class="footer__form-email" type="email" placeholder="E-mail" />
 
 									<button class="footer__form-btn" type="button">
-										<svg
-											width="26"
-											height="10"
-											viewBox="0 0 26 10"
-											fill="none"
-											xmlns="http://www.w3.org/2000/svg"
-										>
+										<svg width="26" height="10" viewBox="0 0 26 10" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path
 												d="M0.292968 4.91142L25.724 4.91142M25.724 4.91142C25.724 4.91142 21.2617 4.39391 18.6453 3.40992C16.6207 2.64853 13.795 0.816407 13.795 0.816407M25.724 4.91142C25.724 4.91142 21.2654 5.21503 18.6453 6.27643C16.6155 7.09867 13.795 9.14293 13.795 9.14293"
 												stroke="white"
@@ -622,5 +579,11 @@
 		<script src="js/slick.min.js"></script>
 		<script src="js/jquery.magnific-popup.js"></script>
 		<script src="js/main.min.js"></script>
+
+		<script id="__bs_script__">
+			//<![CDATA[
+			document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.27.5'><\/script>".replace("HOST", location.hostname));
+			//]]>
+		</script>
 	</body>
 </html>

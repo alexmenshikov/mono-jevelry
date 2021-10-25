@@ -8,6 +8,7 @@ const htmlmin = require("gulp-htmlmin");
 const rename = require("gulp-rename");
 const concatCss = require("gulp-concat-css");
 const jsmin = require("gulp-jsmin");
+// const browserSync = require('browser-sync').create();
 
 sass.compiler = require("node-sass");
 
@@ -46,12 +47,21 @@ function watching() {
 	watch("./src/js/main.js", js);
 }
 
+// function serve() {
+// 	browserSync.init({
+// 		server: './'
+// 	});
+// 	//следим за обновлением файлов и при изменении перезагружаем страницу
+// 	browserSync.watch('./**/*.*').on('change', browserSync.reload);
+// }
+
 exports.styles = styles;
 // exports.html = html;
 exports.js = js;
 exports.watching = watching;
 
 exports.default = parallel(styles, js, watching);
+// exports.default = parallel(styles, js, watching, serve);
 
 // exports.sass = function () {
 // 	return src("./sass/main.scss")

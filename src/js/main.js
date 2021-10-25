@@ -11,6 +11,36 @@ $(document).ready(() => {
 		}
 	});
 
+	// ======
+	// const selectSingle = document.querySelector(".__select");
+	// const selectSingle_title = selectSingle.querySelector(".__select__title");
+	// const selectSingle_labels = selectSingle.querySelectorAll(".__select__label");
+
+	// // Toggle menu
+	// selectSingle_title.addEventListener("click", () => {
+	// 	if ("active" === selectSingle.getAttribute("data-state")) {
+	// 		selectSingle.setAttribute("data-state", "");
+	// 	} else {
+	// 		selectSingle.setAttribute("data-state", "active");
+	// 	}
+	// });
+
+	// // Close when click to option
+	// for (let i = 0; i < selectSingle_labels.length; i++) {
+	// 	selectSingle_labels[i].addEventListener("click", (evt) => {
+	// 		selectSingle_title.textContent = evt.target.textContent;
+	// 		selectSingle.setAttribute("data-state", "");
+	// 	});
+	// }
+
+	// // Reset title
+	// const reset = document.querySelector(".reset");
+	// reset.addEventListener("click", () => {
+	// 	selectSingle_title.textContent =
+	// 		selectSingle_title.getAttribute("data-default");
+	// });
+	// ======
+
 	// === Изменяем язык ===
 	let arrow = $(".top__language-arrow");
 	let top_language = $(".top__language-select");
@@ -39,20 +69,37 @@ $(document).ready(() => {
 
 	// === открываем меню каталог ===
 	let menu_catalog = $(".menu-catalog");
+	let menu_catalog_close = $(".menu-catalog__close");
 	let body = $("body");
-	$(".top__btn").click(() => {
-		menu_catalog.show();
-		menu_catalog.removeClass("menu-close");
-		menu_catalog.addClass("menu-open");
+	let btn_menu = $(".top__btn");
+
+	menu_catalog.hide();
+
+	btn_menu.on("click", () => {
+		menu_catalog.slideDown(500);
 		body.css("overflow", "hidden");
 	});
 
-	$(".menu-catalog__close").click(() => {
-		menu_catalog.removeClass("menu-open");
-		menu_catalog.addClass("menu-close");
+	menu_catalog_close.on("click", () => {
 		menu_catalog.slideUp(500);
 		body.css("overflow", "visible");
 	});
+
+	// let menu_catalog = $(".menu-catalog");
+	// let body = $("body");
+	// $(".top__btn").click(() => {
+	// 	menu_catalog.show();
+	// 	menu_catalog.removeClass("menu-close");
+	// 	menu_catalog.addClass("menu-open");
+	// 	body.css("overflow", "hidden");
+	// });
+	//
+	// $(".menu-catalog__close").click(() => {
+	// 	menu_catalog.removeClass("menu-open");
+	// 	menu_catalog.addClass("menu-close");
+	// 	menu_catalog.slideUp(500);
+	// 	body.css("overflow", "visible");
+	// });
 
 	// === Добавление в корзину ===
 	$(".goods__card__bag").click(() => {
